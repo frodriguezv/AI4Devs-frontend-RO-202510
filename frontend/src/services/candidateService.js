@@ -5,7 +5,7 @@ export const uploadCV = async (file) => {
     formData.append('file', file);
 
     try {
-        const response = await axios.post('http://localhost:3010/upload', formData, {
+        const response = await axios.post('http://10.211.55.5:3010/upload', formData, {
             headers: {
                 'Content-Type': 'multipart/form-data',
             },
@@ -18,7 +18,7 @@ export const uploadCV = async (file) => {
 
 export const sendCandidateData = async (candidateData) => {
     try {
-        const response = await axios.post('http://localhost:3010/candidates', candidateData);
+        const response = await axios.post('http://10.211.55.5:3010/candidates', candidateData);
         return response.data;
     } catch (error) {
         throw new Error('Error al enviar datos del candidato:', error.response.data);

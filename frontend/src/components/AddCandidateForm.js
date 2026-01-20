@@ -73,7 +73,7 @@ const AddCandidateForm = () => {
                 endDate: experience.endDate ? experience.endDate.toISOString().slice(0, 10) : ''
             }));
 
-            const res = await fetch('http://localhost:3010/candidates', {
+            const res = await fetch('http://10.211.55.5:3010/candidates', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

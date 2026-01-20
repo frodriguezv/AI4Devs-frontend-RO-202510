@@ -20,7 +20,7 @@ const FileUploader = ({ onChange, onUpload }) => {
       formData.append('file', file);
 
       try {
-        const res = await fetch('http://localhost:3010/upload', {
+        const res = await fetch('http://10.211.55.5:3010/upload', {
           method: 'POST',
           body: formData,
         });

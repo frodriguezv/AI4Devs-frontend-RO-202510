@@ -31,9 +31,9 @@ app.use((req, res, next) => {
   next();
 });
 
-// Middleware para permitir CORS desde http://localhost:3000
+// Middleware para permitir CORS desde localhost y la IP de la red
 app.use(cors({
-  origin: 'http://localhost:3000',
+  origin: ['http://localhost:3000', 'http://10.211.55.5:3000'],
   credentials: true
 }));
 
@@ -64,5 +64,5 @@ app.use((err: any, req: Request, res: Response, next: NextFunction) => {
 });
 
 app.listen(port, () => {
-  console.log(`Server is running at http://localhost:${port}`);
+  console.log(`Server is running at http://10.211.55.5:${port}`);
 });
